@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Document</title>
+            <link rel="icon" type="icon" href="candy.png">
+        </head>
+        <body>
+            <center><p id="Welcome">Hello World</p></center>
+            <button onclick="change()">Change me</button>
+            <!--onclick() is known as event listener-->
+
+
+            <script>
+                const s="hello"; //string 
+                const n=1; //true
+                const b=true;
+                let u; //undefined
+                const m=null; //null
+        
+                console.log(s)
+                console.log(n)
+                console.log(b)
+                console.log(m)
+        
+                let x=['a', 1, 'hello', true] //array
+                console.log(x)
+
+                let obj = {
+                    "number" : 5,
+                    "string" : "hi"
+                };
+                console.log(obj);
+                console.log(obj.number);
+                console.log(obj.string);
+
+                function sayHello(){
+                    console.log("Hello babygurl");
+                }
+
+                sayHello();
+                sayHello();
+
+                document.getElementById("Welcome").innerHTML = "HELLO WORLD";
+                //innerHTML to change the content that was gotten by it's element ID
+
+                function change(){
+                    // document.getElementById("Welcome").style.cssproperty = ""
+                    document.getElementById("Welcome").innerHTML = "<i>Hello World</i>"
+                    document.getElementById("Welcome").style.fontSize = "50px"
+                    document.getElementById("Welcome").style.backgroundColor = "yellow"
+                    //We can change the styles of a particular element by accessing it's id and with the help of style attribute
+                    alert("The paragraph is changed");
+                }
+            </script>
+        </body>
+    </html>
