@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Input Event Example</title>
+</head>
+<body>
+    <input type="text" id="inputField" placeholder="Type here...">
+    <p id="inputOutput"></p>
+
+    <script>
+        const inputField = document.getElementById('inputField');
+        const output = document.getElementById('inputOutput');
+
+        inputField.addEventListener('input', () => {  //Triggered when the user types or modifies input in a form field.
+            output.textContent = `You typed: ${inputField.value}`;
+        });
+    </script>
+</body>
+</html>
