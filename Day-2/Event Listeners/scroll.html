@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Scroll Event Example</title>
+    <style>
+        #scrollDiv {
+            width: 300px;
+            height: 100px;
+            overflow-y: scroll;
+            border: 1px solid black;
+        }
+        #content {
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollDiv">
+        <div id="content">Scroll inside this box!</div>
+    </div>
+    <p id="scrollOutput"></p>
+
+    <script>
+        const scrollDiv = document.getElementById('scrollDiv');
+        const output = document.getElementById('scrollOutput');
+
+        scrollDiv.addEventListener('scroll', () => {  //Triggered when the user scrolls the page or an element.
+            output.textContent = `Scrolled: ${scrollDiv.scrollLeft}px`;
+        });
+    </script>
+</body>
+</html>
