@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Submit Event Example</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button type="submit">Submit</button>
+    </form>
+    <p id="formOutput"></p>
+
+    <script>
+        const form = document.getElementById('myForm');
+        const output = document.getElementById('formOutput');
+
+        form.addEventListener('submit', (e) => {   //Triggered when a form is submitted.
+            e.preventDefault(); // Prevent page reload
+            const name = document.getElementById('nameInput').value;
+            output.textContent = `Hello, ${name}! Form submitted successfully.`;
+        });
+    </script>
+</body>
+</html>
