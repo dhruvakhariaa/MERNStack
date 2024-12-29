@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCCC</title>
+    </head>
+<body>
+	<label> text : </label>
+	<input type="text" id="textiD" name="textid">
+	<button id="clickButton"> click me </button>
+	<div class="container">
+        
+        <span class="output" id="outputText"></span>
+        </div>
+
+   	<h1 id="head"> hiii </h1>
+	                 
+ 	
+	<script> 
+
+	let inputField = document.getElementById('textiD');
+        let outputText = document.getElementById('outputText');
+        let clickButton = document.getElementById('clickButton');
+
+            clickButton.addEventListener('click', () => {
+            outputText.textContent = inputField.value;
+        });
+
+
+
+
+	let ptag=document.createElement("p");
+	ptag.innerHTML="this is a p tag";
+	console.log(ptag);
+	let heading=document.getElementById("head");
+	heading.appendChild(ptag);
+	
+	</script>
+</body>
+</html>
