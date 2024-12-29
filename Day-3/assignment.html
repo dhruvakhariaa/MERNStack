@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        #todo-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            width: 70%;
+            padding: 8px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e9ecef;
+            margin: 8px 0;
+            padding: 8px 12px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .delete-btn {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 4px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .delete-btn:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>To-Do List Application</h1>
+    <div id="todo-container">
+        <input type="text" id="todo-input" placeholder="Add a new task..." />
+        <button id="add-btn">Add Task</button>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script>
+        // Select elements
+        const input = document.getElementById('todo-input');
+        const addBtn = document.getElementById('add-btn');
+        const todoList = document.getElementById('todo-list');
+
+        // Function to add a task
+        function addTask() {
+            const taskText = input.value.trim();
+
+            if (taskText !== "") {
+                // Create a new <li> element
+                const li = document.createElement('li');
+                li.textContent = taskText;
+
+                // Create a delete button
+                const deleteBtn = document.createElement('button');
+                deleteBtn.textContent = 'Delete';
+                deleteBtn.className = 'delete-btn';
+
+                // Append the delete button to the <li>
+                li.appendChild(deleteBtn);
+
+                // Append the <li> to the <ul>
+                todoList.appendChild(li);
+
+                // Clear the input field
+                input.value = "";
+
+                // Event listener to remove task
+                deleteBtn.addEventListener('click', () => {
+                    todoList.removeChild(li);
+                });
+            } else {
+                alert("Task cannot be empty!");
+            }
+        }
+
+        // Add event listener for the Add button
+        addBtn.addEventListener('click', addTask);
+
+        // Optional: Add task when Enter key is pressed
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                addTask();
+            }
+        });
+    </script>
+</body>
+</html>
