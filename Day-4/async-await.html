@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCCC2</title>
+    </head>
+<body>
+<script>
+	async function tasks(){
+	try{
+		console.log("tasks to be done");
+
+	    let tailor=new Promise ((resolve,reject)=> 
+		{
+		setTimeout(()=> {
+		resolve("cloths");
+		}, 2000);
+		});
+
+	    let halwai=new Promise ((resolve,reject)=> 
+		{
+		setTimeout(()=> {
+		resolve("sweet");
+		},5000);
+		});
+
+	    console.log("please wait for the tailored cloths");
+	    let tailoredClothes= await tailor;
+	    console.log("the cloths are ready as "+ tailoredClothes);
+
+	    console.log("please wait for the halwai to make laddoos");
+
+	    let ladoos=await halwai;
+	    console.log("the ladoos are ready as "+ladoos );
+
+	    }
+				
+	    catch (error) {
+            console.error("Error occurred:", error)
+        }
+	}
+tasks();
+	
+</script>
+</body>
+</html>
