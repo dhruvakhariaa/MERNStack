@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Type conversion Example</title>
+            <style>
+                p{
+                    font-size: 100px;
+                }
+            </style>
+        </head>
+        <body>
+            <center><p>Hello World</p></center>
+            <script>
+                let n1 = 10;
+                let n2 = "1";
+
+                let joinedString = n1+n2; //Implicit type conversion from int to string
+                let sumation = n1-n2; //Implicit type conversion from string to int
+                console.log("When + operator is used : " + joinedString);
+                console.log("When - operator is used : " + sumation);
+                n2 = parseInt(n2); //Explicit type conversion
+            </script>
+        </body>
+    </html>
