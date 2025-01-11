@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mouseover and Mouseout Example</title>
+</head>
+<body>
+    <div id="hoverDiv" style="width: 200px; height: 100px; background-color: lightblue; text-align: center;">
+        Hover over me!
+    </div>
+    <p id="hoverMessage"></p>
+
+    <script>
+        const hoverDiv = document.getElementById('hoverDiv');
+        const message = document.getElementById('hoverMessage');
+
+        hoverDiv.addEventListener('mouseover', () => {  //mouseover is triggered when the mouse enters an element.
+            message.textContent = "Mouse is over the box!";
+            hoverDiv.style.backgroundColor = "lightgreen";
+            hoverDiv.style.color = "black";
+            hoverDiv.style.fontSize = "20px";
+            hoverDiv.style.height = "150px";
+            hoverDiv.style.width = "150px";
+        });
+
+        hoverDiv.addEventListener('mouseout', () => {  //mouseout is triggered when the mouse leaves the element.
+            message.textContent = "Mouse left the box!";
+            hoverDiv.style.backgroundColor = "lightblue";
+            hoverDiv.style.height = "100px";
+            hoverDiv.style.width = "200px";
+        });
+    </script>
+</body>
+</html>

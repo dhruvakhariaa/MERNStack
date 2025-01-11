@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Load Event Example</title>
+</head>
+<body>
+    <p id="loadMessage"></p>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loadMessage').textContent = "Page fully loaded!";
+        });
+    </script>
+</body>
+</html>

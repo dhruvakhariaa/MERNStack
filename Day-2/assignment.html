@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Text Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Real-Time Text Display</h2>
+        <!-- Input Field -->
+        <input type="text" id="userInput" placeholder="Type something here...">
+        <p>Your Input: <span id="displayText"></span></p>
+    </div>
+
+    <script>
+        // Get references to the input field and display span
+        const inputField = document.getElementById('userInput');
+        const displayText = document.getElementById('displayText');
+
+        // Add an input event listener to the input field
+        inputField.addEventListener('input', function () {
+            // Set the content of the displayText span to the input value
+            displayText.textContent = inputField.value;
+        });
+    </script>
+</body>
+</html>

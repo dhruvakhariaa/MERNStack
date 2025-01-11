@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Callback Function Example</title>
+        </head>
+        <body>
+            <p><center>Callback Function Example</center></p>
+            <script>
+                function oneFunc(callback){
+                    console.log("1st step done");
+                    callback();
+                }
+                function twoFunc(callback){
+                    console.log("2nd step done");
+                    callback();
+                }
+                function threeFunc(callback){
+                    console.log("3rd step done");
+                    callback();
+                }
+                function fourFunc(callback){
+                    console.log("4th step done");
+                    callback();
+                }
+
+                oneFunc(() => {
+                    twoFunc(() => {
+                        threeFunc(() => {
+                            fourFunc(function(){
+                                console.log("All done");
+                            })
+                        })
+                    })
+                })
+
+            </script>
+        </body>
+    </html>

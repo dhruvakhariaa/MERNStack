@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Change Event Example</title>
+</head>
+<body>
+    <select id="colorSelect">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <p id="colorOutput">You selected: Red</p>
+
+    <script>
+        const select = document.getElementById('colorSelect');
+        const output = document.getElementById('colorOutput');
+
+        select.addEventListener('change', () => {  //Triggered when the value of an input field or dropdown is changed.
+            output.textContent = `You selected: ${select.value}`;
+        });
+    </script>
+</body>
+</html>

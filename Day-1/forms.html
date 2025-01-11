@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link rel="icon" type="icon" href="candy.png"> <!-- Favicon icon of title logo-->
+            <title>Forms Example</title>
+        </head>
+        <body>
+            <form action="https://google.com" method="post" enctype="multipart/form-data" align="center">
+                <fieldset>
+                    <legend>Sign-Up</legend>
+                    <label>User name
+                        <input id="uname" type="text" placeholder="Enter your username" name="uname"autofocus autocomplete required/>
+                    </label><br><br>
+                    <label for="pass">Password
+                        <input id="pass" type="password" maxlength="9" minlength="3" value="123" disabled/>
+                    </label><br><br>
+                    <label for="mail">E-mail
+                        <input id="mail" type="email" value="mail" readonly placeholder="This is readonly field"/>
+                    </label><br><br>
+                    <label for="age">Age
+                        <input id="age" type="range" min="20" max="70"/>
+                    </label><br><br>
+                    
+                </fieldset>
+            </form>
+        </body>
+    </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiple Event Listeners</title>
+</head>
+<body>
+    <h2>Click the button!</h2>
+    <button id="myButton">Click Me</button>
+    <p id="output"></p>
+
+    <script>
+        const button = document.getElementById("myButton");
+        const output = document.getElementById("output");
+
+        // First event listener: Change button text
+        button.addEventListener("click", () => {
+            button.textContent = "Button Clicked!";
+        });
+
+        // Second event listener: Display message
+        button.addEventListener("click", () => {
+            output.textContent = "You just clicked the button!";
+        });
+
+        // Third event listener: Log a message to console
+        button.addEventListener("click", () => {
+            console.log("Button was clicked!");
+        });
+    </script>
+</body>
+</html>

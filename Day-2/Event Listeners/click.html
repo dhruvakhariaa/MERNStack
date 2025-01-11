@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Click Event Example</title>
+</head>
+<body>
+    <button id="clickBtn">Click Me!</button>
+    <p id="clickResult"></p>
+
+    <script>
+        const button = document.getElementById('clickBtn');
+        const result = document.getElementById('clickResult');
+
+        button.addEventListener('click', () => {  //Triggered when the user clicks on an element (e.g., button, div, etc.).
+            result.textContent = "Button was clicked!";
+        });
+    </script>
+</body>
+</html>

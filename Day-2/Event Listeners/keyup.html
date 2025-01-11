@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keydown and Keyup Example</title>
+</head>
+<body>
+    <input type="text" id="textInput" placeholder="Type something...">
+    <p id="makeItBig" tabindex="0">Hello World</p>
+    <p id="keyResult"></p>
+
+    <script>
+        const input = document.getElementById('textInput');
+        const result = document.getElementById('keyResult');
+        const text = document.getElementById('makeItBig');
+
+        // Keydown event on input field
+        input.addEventListener('keydown', (event) => {
+            result.textContent = `Key Pressed: ${event.key}`;
+        });
+
+        input.addEventListener('keyup', () => {
+            result.textContent = "Key Released!";
+        });
+
+        // Make paragraph focusable and respond to keydown
+        text.addEventListener('click', () => {
+            text.focus(); // Focus on the paragraph
+        });
+
+        text.addEventListener('keydown', () => {
+            text.style.fontSize = "50px";
+        });
+    </script>
+</body>
+</html>

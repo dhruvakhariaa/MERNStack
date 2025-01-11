@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>
+                Timeout example
+            </title>
+        </head>
+        <body>
+            <h1 id="heading1"></h1>
+
+            <script>
+
+                // setTimeout(() => {
+                //     document.getElementById("heading1").innerHTML = "HELLO WORLD";
+                // }, 3000);
+
+                let h1 = document.getElementById("heading1");
+                function delayedHeading(){
+                    h1.innerHTML = "HELLO WORLD";
+                    console.log("Function executed");
+                }
+
+                // setInterval(delayedHeading, 3000);  //runs the function every 3 seconds and repeats itself
+                setTimeout(delayedHeading, 3000); //runs the function after 3 seconds and does not repeat itself
+            </script>
+        </body>
+    </html>
